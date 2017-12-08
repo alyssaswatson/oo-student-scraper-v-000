@@ -28,7 +28,15 @@ class Scraper
     individual_student[:bio] = doc.css(".description-holder").css("p").text
     urls = doc.css("a").attribute("href").value
     urls.each do |url|
-
+      if url.include?("twitter")
+        individual_student[:twitter] = url
+      elsif url.include?("linkedin")
+        individual_student[:linkedin] = url
+      elsif url.include?("github")
+        individual_student[:github] = url
+      elsif url.include?("blog")
+        individual_student[:blog] = url
+      end
     end
     twitter =
     linkedin =
