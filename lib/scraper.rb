@@ -24,10 +24,12 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     individual_student = []
     doc = Nokogiri::HTML(open(profile_url))
-    doc.each do |student|
     profile_quote = doc.css(".profile-quote").text
     bio = doc.css(".description-holder").css("p").text
-    name = student.css(".student-name").text
+    twitter =
+    linkedin =
+    github =
+    blog =
     individual_student.push(
         twitter: twitter,
         linkedin: linkedin,
@@ -36,7 +38,6 @@ class Scraper
         profile_quote: profile_quote,
         bio: bio,
       )
-    end
     individual_student
   end
 
