@@ -17,6 +17,7 @@ class Scraper
         profile_url: profile_url,
       )
     end
+    students
   end
 
 
