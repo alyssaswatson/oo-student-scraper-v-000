@@ -38,11 +38,6 @@ class Scraper
         individual_student[:blog] = url
       end
     end
-    twitter =
-    linkedin =
-    github =
-    blog =
-
     individual_student
   end
 
