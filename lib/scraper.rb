@@ -31,12 +31,12 @@ class Scraper
     urls.each do |url|
       if url['href'].include? "twitter"
         individual_student[:twitter] = url['href']
-      elsif url.include?("linkedin")
-        individual_student[:linkedin] = url
-      elsif url.include?("github")
-        individual_student[:github] = url
-      elsif url.include?("blog")
-        individual_student[:blog] = url
+      elsif url['href'].include?("linkedin")
+        individual_student[:linkedin] = url['href']
+      elsif url['href'].include?("github")
+        individual_student[:github] = url['href']
+      elsif url['href'].include?("blog")
+        individual_student[:blog] = url['href']
       end
     end
     individual_student
