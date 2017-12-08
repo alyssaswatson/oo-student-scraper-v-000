@@ -16,8 +16,15 @@ class Scraper
 end
 
 
-doc = Nokogiri::HTML(open(index_url))
+doc = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
 doc.css("student-card").each do |student|
-url = student.css('.tags a')
+profile_url = student.css(".tags a")
+location = student.css("student-location")
+name = student.css("student-name")
+showings.push(
+    name: name,
+    location: location,
+    profile_url: profile_url,
+  )
 end
-binding.pry
+#binding.pry
