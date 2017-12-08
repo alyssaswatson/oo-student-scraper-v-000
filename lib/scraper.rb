@@ -30,7 +30,7 @@ class Scraper
     url_array = []
     urls.each do |url|
       if url['href'].include? "twitter"
-        individual_student[:twitter] = url
+        individual_student[:twitter] = url['href']
       elsif url.include?("linkedin")
         individual_student[:linkedin] = url
       elsif url.include?("github")
