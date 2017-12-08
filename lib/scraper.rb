@@ -25,7 +25,7 @@ class Scraper
     individual_student = []
     doc = Nokogiri::HTML(open(profile_url))
     doc.each do |student|
-    profile_url = student.css("a").attribute("href").value
+    profile_quote = doc.css(".profile-quote").text
     location = student.css(".student-location").text
     name = student.css(".student-name").text
     individual_student.push(
