@@ -2,11 +2,11 @@ require 'open-uri'
 require 'pry'
 require 'nokogiri'
 
-
+doc = Nokogiri::HTML(open(index_url))
 class Scraper
 
   def self.scrape_index_page(index_url)
-    doc = Nokogiri::HTML(open(index_url))
+
   end
   binding.pry
 
