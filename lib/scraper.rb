@@ -36,7 +36,6 @@ class Scraper
         github: github,
         blog: blog,
         profile_quote: profile_quote,
-        bio: bio,
       )
     individual_student
   end
