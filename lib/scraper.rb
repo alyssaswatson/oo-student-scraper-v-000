@@ -27,4 +27,4 @@ showings.push(
     profile_url: profile_url,
   )
 end
-#binding.pry
+binding.pry
