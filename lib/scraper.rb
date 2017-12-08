@@ -26,7 +26,7 @@ class Scraper
     doc = Nokogiri::HTML(open(profile_url))
     doc.each do |student|
     profile_quote = doc.css(".profile-quote").text
-    location = student.css(".student-location").text
+    bio = doc.css(".description-holder").css("p").text
     name = student.css(".student-name").text
     individual_student.push(
         twitter: twitter,
