@@ -30,13 +30,13 @@ class Scraper
     linkedin =
     github =
     blog =
-    individual_student.push(
-        twitter: twitter,
-        linkedin: linkedin,
-        github: github,
-        blog: blog,
-        profile_quote: profile_quote,
-      )
+    # individual_student.push(
+    #     twitter: twitter,
+    #     linkedin: linkedin,
+    #     github: github,
+    #     blog: blog,
+    #     profile_quote: profile_quote,
+    #   )
     individual_student
   end
 
