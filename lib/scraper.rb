@@ -29,12 +29,15 @@ class Scraper
     location = student.css(".student-location").text
     name = student.css(".student-name").text
     individual_student.push(
-        name: name,
-        location: location,
-        profile_url: profile_url,
+        twitter: twitter,
+        linkedin: linkedin,
+        github: github,
+        blog: blog,
+        profile_quote: profile_quote,
+        bio: bio,
       )
     end
-    students
+    individual_student
   end
 
 end
