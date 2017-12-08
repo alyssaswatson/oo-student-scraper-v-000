@@ -2,7 +2,7 @@ require 'open-uri'
 require 'pry'
 require 'nokogiri'
 
-doc = Nokogiri::HTML(open(./fixtures/student-site/index.html))
+doc = Nokogiri::HTML(open("./fixtures/student-site/index.html"))
 binding.pry
 class Scraper
 
