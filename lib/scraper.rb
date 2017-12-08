@@ -35,7 +35,7 @@ class Scraper
         individual_student[:linkedin] = url['href']
       elsif url['href'].include?("github")
         individual_student[:github] = url['href']
-      elsif url['href'].include?("blog")
+      else 
         individual_student[:blog] = url['href']
       end
     end
